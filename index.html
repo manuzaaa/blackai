@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire | TP-GIT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style>
+    :root {
+      --main: #1e1e1e;
+      --accent: #6e5944;
+      --hover-accent: #5a4a38;
+      --bg: #fafafa;
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--main);
+      padding: 5vh 2rem;
+    }
+
+    .form-section {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      text-align: left;
+      color: var(--main);
+    }
+
+    .label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .input,
+    .textarea {
+      border: none;
+      border-bottom: 1px solid #ccc;
+      border-radius: 0;
+      box-shadow: none;
+      background: transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .input:focus,
+    .textarea:focus {
+      border-color: var(--accent);
+      box-shadow: none;
+    }
+
+    .radio + .radio {
+      margin-left: 1rem;
+    }
+
+    .button.is-luxury {
+      background-color: var(--accent);
+      color: white;
+      font-weight: 500;
+      border-radius: 2px;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button.is-luxury:hover {
+      background-color: var(--hover-accent);
+    }
+
+    .field:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="form-section">
+    <h1 class="title">Formulaire d'information</h1>
+
+    <form method="post" action="">
+
+      <div class="field">
+        <label class="label" for="nom">Nom</label>
+        <div class="control">
+          <input class="input" type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="prenom">Prénom</label>
+        <div class="control">
+          <input class="input" type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Sexe</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="sexe" value="homme" required>
+            Homme
+          </label>
+          <label class="radio">
+            <input type="radio" name="sexe" value="femme">
+            Femme
+          </label>
+          <label class="radio">
+            <input type="radio" name="sexe" value="autre">
+            Autre
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <button type="submit" class="button is-luxury is-fullwidth">Valider</button>
+        </div>
+      </div>
+
+    </form>
+  </section>
+
+</body>
+</html>
